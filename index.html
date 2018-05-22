@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript on the beach</title>
+</head>
+<body>
+   <script type="text/javascript">
+
+       // Object.prototype
+
+       if (typeof Object.create !== 'function') {
+           Object.create = function(truc) {
+               var F = function() {};
+               F.prototype = truc;
+               return new F();
+           }
+       }
+
+       var machin = Object.create("bordel");
+
+
+       //Notion de Réflexion
+
+       typeof vol.toString(); // 'function'
+       typeof vol.constructor(); // 'function'
+
+       vol.hasOwnProperty('couleur')  // true
+       vol.hasOwnProperty('contructor')  // false
+
+
+
+   </script>
+
+</body>
+</html>
